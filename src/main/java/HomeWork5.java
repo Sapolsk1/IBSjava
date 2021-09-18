@@ -13,29 +13,24 @@ public class HomeWork5 {
 
     public static double getDob() {
         System.out.println("Введите число:");
-        double num;
         if (scanner.hasNextDouble()) {
-            num = scanner.nextDouble();
+            return scanner.nextDouble();
         } else {
             System.out.println("Ошибка ввода числа!");
             scanner.next();
-            num = getDob();
+            return getDob();
         }
-        return num;
     }
 
     public static char getOper() {
         System.out.println("Введите операцию:");
-        char operation;
         if (scanner.hasNext()) {
-            operation = scanner.next().charAt(0);
+            return scanner.next().charAt(0);
         } else {
             System.out.println("Ошибка ввода операции");
             scanner.next();
-            operation = getOper();
+            return getOper();
         }
-        return operation;
-
     }
 
     public static double calculate(double num1, double num2, char op) {
