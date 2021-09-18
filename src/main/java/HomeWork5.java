@@ -7,7 +7,7 @@ public class HomeWork5 {
         double number1 = getDob();
         double number2 = getDob();
         char operation = getOper();
-        double result = caclulate(number1, number2, operation);
+        double result = calculate(number1, number2, operation);
         System.out.println("Результат операции: " + Math.floor(result));
     }
 
@@ -38,7 +38,7 @@ public class HomeWork5 {
 
     }
 
-    public static double caclulate(double num1, double num2, char op) {
+    public static double calculate(double num1, double num2, char op) {
         double result;
         switch (op) {
             case '+':
@@ -55,7 +55,7 @@ public class HomeWork5 {
                 break;
             default:
                 System.out.println("Операция неверная.");
-                result = caclulate(num1, num2, getOper());
+                result = calculate(num1, num2, getOper());
         }
         return result;
     }
