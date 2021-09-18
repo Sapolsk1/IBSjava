@@ -12,11 +12,11 @@ public class HomeWork4 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Введите первое значение x = ");
-        double x = scanner.nextInt();
+        double x = scanner.nextDouble();
         System.out.println("Введите первое значение y = ");
-        double y = scanner.nextInt();
+        double y = scanner.nextDouble();
         System.out.println("Введите первое значение z = ");
-        double z = scanner.nextInt();
+        double z = scanner.nextDouble();
 
         double b = x + y + z;
         double a = b / 2;
