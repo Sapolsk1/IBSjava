@@ -18,7 +18,7 @@ public class HomeWork4 {
         System.out.print("Введите первое значение z = ");
         double z = scanner.nextDouble();
 
-        double b = x + y + z;
+        double b = (x + y + z) / 3;
         double a = b / 2;
 
         System.out.println(Math.floor(a));

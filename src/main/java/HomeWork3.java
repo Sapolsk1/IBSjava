@@ -2,8 +2,8 @@ import java.util.Arrays;
 
 public class HomeWork3 {
     public static void main(String[] args)     {
-        int[] array_nums = {20, 30, 40};
-        System.out.println("Массив = " + array_nums);//так не делать
+        int[] array_nums = {20, 30, 40, 50, 60};
+        System.out.println("Массив = " + array_nums);
         System.out.println("Original Array: " + Arrays.toString(array_nums));
         int x = array_nums[0];
         array_nums[0] = array_nums[array_nums.length - 1];

@@ -34,7 +34,7 @@ public class HomeWork5 {
     }
 
     public static double calculate(double num1, double num2, char op) {
-        double result;
+        double result = 0;
         switch (op) {
             case '+':
                 result = num1 + num2;
@@ -46,8 +46,15 @@ public class HomeWork5 {
                 result = num1 * num2;
                 break;
             case '/':
-                result = num1 / num2;
+                if (num2 != 0) {
+                    result = num1 / num2;
+                } else {
+                    System.out.println("На ноль делить нельзя");
+                }
                 break;
+            /**
+             * На данном этапе не могу отказаться от default.
+             */
             default:
                 System.out.println("Операция неверная.");
                 result = calculate(num1, num2, getOper());
