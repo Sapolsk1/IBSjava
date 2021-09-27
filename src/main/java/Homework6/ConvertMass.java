@@ -34,28 +34,28 @@ public class ConvertMass extends Conventer{
     double convert(double value, int type) {
         switch (type) {
             case 1:
-                System.out.println("грамм - " + value * ratioGram + "\n" +
-                        "килограмм - " + value * ratioKilo + "\n" +
-                        "центнер - " + value * ratioCentner + "\n" +
-                        "тонна - " + value * ratioTon);
+                System.out.println(value * ratioGram + " грамм" +  "\n" +
+                        value / ratioKilo + " килограмм" + "\n" +
+                        value / ratioCentner + " центнер" + "\n" +
+                        value / ratioTon + " тонна");
                 break;
             case 2:
-                System.out.println("грамм - " + value / ratioKilo + "\n" +
-                        "килограмм - " + value * 1 + "\n" +
-                        "центнер - " + (value / ratioKilo) * ratioCentner + "\n" +
-                        "тонна - " + (value / ratioKilo) * ratioTon);
+                System.out.println(value * ratioKilo + " грамм" +  "\n" +
+                        value * 1 + " килограмм" + "\n" +
+                        value / 10 + " центнер" + "\n" +
+                        value / 100 + " тонна");
                 break;
             case 3:
-                System.out.println("грамм - " + value / ratioCentner + "\n" +
-                        "килограмм - " + (value / ratioCentner) * ratioKilo + "\n" +
-                        "центнер - " + value * 1 + "\n" +
-                        "тонна - " + (value / ratioCentner) * ratioTon);
+                System.out.println(value * ratioCentner + " грамм" +  "\n" +
+                        value * 10 + " килограмм" + "\n" +
+                        value * 1 + " центнер" + "\n" +
+                        value / 10 + " тонна");
                 break;
             case 4:
-                System.out.println("грамм - " + value / ratioTon + "\n" +
-                        "килограмм - " + (value / ratioTon) * ratioKilo + "\n" +
-                        "центнер - " + (value / ratioTon) * ratioCentner + "\n" +
-                        "тонна - " + value * 1);
+                System.out.println(value * ratioTon + " грамм" +  "\n" +
+                        value * 100 + " килограмм" + "\n" +
+                        value * 10 + " центнер" + "\n" +
+                        value * 1 + " тонна");
                 break;
         }
         return 0;
