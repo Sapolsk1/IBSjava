@@ -7,7 +7,7 @@ public class HomeWork7 {
         final String y="123";
         final String z="IBS";
 
-        System.out.println("Задайте размер  массива:");
+        System.out.println("Задайте размер массива:");
         Scanner scannerSize = new Scanner(System.in);
         int size = scannerSize.nextInt();
         String[] arr = new String[size];
