@@ -17,21 +17,10 @@ public class ConvertDistance extends Conventer {
     final double ratioYard = 1.094;
     final double ratioFoot = 3.281;
 
-    Scanner scanner = new Scanner(System.in);
 
-    public double getValue() {
-        System.out.println("Введите число: ");
-        if (scanner.hasNextDouble() && value >= 0) {
-            return scanner.nextDouble();
-        } else {
-            System.out.println("Ошибка ввода числа!");
-            scanner.next();
-            return getValue();
-        }
-    }
 
     public int getType() {
-        type = scanner.nextInt();
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Выберите единицу измерения: 1 - метр, 2 - миля, 3 - ярд, 4 - фут");
         if (scanner.hasNextInt() || type == 1 || type == 2 || type == 3 || type == 4) {
             return scanner.nextInt();
@@ -40,10 +29,11 @@ public class ConvertDistance extends Conventer {
             scanner.next();
             return getType();
         }
+
     }
 
     @Override
-    double convert(double value, int type) {
+    double convert(int unit, double value, int type) {
         switch (type) {
             case 1:
                 System.out.println("meter - " + value * ratioMeter + "\n" +
