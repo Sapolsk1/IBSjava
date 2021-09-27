@@ -33,7 +33,7 @@ public class ConvertDistance extends Conventer {
     }
 
     @Override
-    double convert(int unit, double value, int type) {
+    double convert(double value, int type) {
         switch (type) {
             case 1:
                 System.out.println("meter - " + value * ratioMeter + "\n" +

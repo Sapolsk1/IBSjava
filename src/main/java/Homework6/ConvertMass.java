@@ -31,7 +31,7 @@ public class ConvertMass extends Conventer{
     }
 
     @Override
-    double convert(int unit, double value, int type) {
+    double convert(double value, int type) {
         switch (type) {
             case 1:
                 System.out.println("грамм - " + value * ratioGram + "\n" +

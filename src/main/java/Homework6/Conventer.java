@@ -7,7 +7,8 @@ public abstract class Conventer {
     double value;
     int type;
 
-    abstract double convert(int unit, double value, int type);
+    abstract double convert(double value, int type);
+
 
     public int getUnit(){
         Scanner scanner = new Scanner(System.in);
@@ -25,7 +26,6 @@ public abstract class Conventer {
             System.out.println("Ошибка ввода единицы измерения!");
             return getUnit();
         }
-
     }
 
     public double getValue() {
