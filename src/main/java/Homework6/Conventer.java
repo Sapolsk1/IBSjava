@@ -12,35 +12,36 @@ public abstract class Conventer {
 
     public int getUnit(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Выберите что переводить: 1 - масса, 2 - расстояние");
         try {
+            System.out.println("Выберите что переводить: 1 - масса, 2 - расстояние");
             unit = Integer.parseInt(scanner.nextLine());
+            if (unit == 1 || unit == 2) {
+                return unit;
+            } else {
+                System.out.println("Ошибка ввода единицы измерения!");
+                return getUnit();
+            }
         } catch (NumberFormatException e) {
             e.printStackTrace();
             System.out.println("Ошибка ввода единицы измерения!");
             return getUnit();
         }
-        if (unit == 1 || unit == 2) {
-            return unit;
-        } else {
-            System.out.println("Ошибка ввода единицы измерения!");
-            return getUnit();
-        }
+
     }
 
     public double getValue() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите число:");
-        try {
+        try{
+            System.out.println("Введите число:");
             value = Double.parseDouble(scanner.nextLine());
+            if (value >= 0) {
+                return value;
+            } else {
+                System.out.println("Ошибка ввода числа!");
+                return getValue();
+            }
         } catch (NumberFormatException e) {
             e.printStackTrace();
-            System.out.println("Ошибка ввода числа!");
-            return getValue();
-        }
-        if (value >= 0) {
-            return value;
-        } else {
             System.out.println("Ошибка ввода числа!");
             return getValue();
         }
